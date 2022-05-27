@@ -1,0 +1,51 @@
+.hero .bg__img {
+  padding: 270px 0;
+  background-position: right top;
+}
+.rs-carousel {
+  height: auto;
+}
+
+.hero__item h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #05297f;
+  text-transform: uppercase;
+}
+
+.hero__item h1 {
+  font-size: 72px;
+  font-weight: 700;
+  color: #252525;
+  text-transform: capitalize;
+  line-height: 80px;
+  width: 805px;
+  margin: 20px 0 40px;
+}
+.hero__item h1 span {
+  color: #05297f;
+}
+.hero__item .hero__button {
+  background: #05297f;
+  padding: 14px 40px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  font-size: 18px;
+  display: inline-block;
+
+  color: #fff;
+}
+.rs-carousel-shape-dot .rs-carousel-label {
+  background: #b1b1b1;
+}
+.rs-carousel-label-wrapper input:checked ~ label {
+  background: #fc9d9d;
+  transform: scale(1.6);
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  -o-transform: scale(1.6);
+}

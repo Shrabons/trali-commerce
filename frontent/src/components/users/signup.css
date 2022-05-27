@@ -1,0 +1,9 @@
+.signup .signup__form {
+  width: 600px;
+  margin: 100px auto;
+}
+.signup .signup__form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 50px;
+}

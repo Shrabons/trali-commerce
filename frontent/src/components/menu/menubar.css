@@ -1,0 +1,70 @@
+.navbar {
+  padding: 25px 0 25px;
+}
+.navbar .navbar__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navbar__main .navbar__logo img {
+  width: 100px;
+}
+.navbar .navbar__main .navbar__items ul li,
+.navbar .navbar__main .navbar__icons ul li {
+  display: inline-block;
+}
+.navbar .navbar__main .navbar__items .nav__item__link {
+  display: inline-block;
+  margin: 0 35px;
+  color: #252525;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Hind", sans-serif;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.navbar .navbar__main .navbar__items .current__page {
+  color: #05297f;
+}
+.navbar .navbar__main .navbar__items .nav__item__link:hover {
+  color: #05297f;
+}
+.navbar .navbar__main .navbar__icons .icons__link {
+  display: inline-block;
+  margin-left: 30px;
+  color: #252525;
+  font-size: 25px;
+  text-decoration: none;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.navbar .navbar__main .navbar__icons .icons__link:hover {
+  color: #05297f;
+}
+.navbar .navbar__main .order__place {
+  position: relative;
+}
+.navbar .navbar__main .order__number {
+  width: 20px;
+  height: 20px;
+  background: #05297f;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid #fff;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  top: 12px;
+  right: -9px;
+}
