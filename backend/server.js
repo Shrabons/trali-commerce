@@ -17,10 +17,6 @@ app.use(cors())
 app.use(express.json())
 
 app.post('/signup', (req, res) => {
-  // console.log(req.body.username)
-  // console.log(req.body.email)
-  // console.log(req.body.password)
-  
   bcrypt.hash(req.body.password, 10, (err, hash)=> {
     let user = {
       username: req.body.username,
@@ -29,7 +25,7 @@ app.post('/signup', (req, res) => {
     }
     const UserDb = new Userman(user)
     UserDb.save()
-    // console.log(hash)
+   
   })
 
   
@@ -41,7 +37,7 @@ app.post('/login', async (req, res)=> {
   if(data[0]){
     bcrypt.compare(req.body.password,data[0].password, function(err, docs){
       if(docs){
-       res.send({msg: "Account Found"})
+       res.send({data: data[0], msg: "Account Found"})
       }else {
         res.send({msg: "Account Not Found"})
       }
@@ -49,9 +45,18 @@ app.post('/login', async (req, res)=> {
   }else {
     res.send({msg: "Email Not Found"})
   }
+})
 
- 
-
+// vendor careteing working function 
+app.put('/vendor/:id', (req, res)=> {
+  console.log(req.params.id)
+  Userman.findByIdAndUpdate(req.params.id,{isVendor: true},{ returnOriginal: false }, function(err, docs) {
+    if(err){
+      console.log(err)
+    }else {
+      res.send(docs)
+    }
+  })
 })
 
 app.get('/hero',(req, res)=>{

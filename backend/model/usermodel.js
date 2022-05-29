@@ -14,6 +14,10 @@ const userSchema = new Schema({
     password:{
         type: String,
         reqrired: true
+    },
+    isVendor: {
+        type: Boolean,
+        default: false
     }
 
 })

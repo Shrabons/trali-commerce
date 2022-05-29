@@ -1,14 +1,24 @@
 import axios from 'axios'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { Button, ButtonToolbar, Form } from 'rsuite'
+import { Store } from '../../Store'
 import './signup.css'
 
 const Signup = () => {
-
+    let navigate = useNavigate()
+    let {state} = useContext(Store)
+    let {userInfo} = state
+   
     let [username, setUsername] = useState("")
     let [email, setEmail] = useState("")
     let [password, setPassword] = useState("")
+
+    useEffect(()=>{
+        if(userInfo){
+            navigate('/')
+        }
+    },[])
 
     const handleSignupSub = () => {
         console.log("signup hyce")
